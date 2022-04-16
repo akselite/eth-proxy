@@ -11,7 +11,7 @@ import stratum.logger
 log = stratum.logger.get_logger('proxy')
 
 if __name__ == '__main__':
-    if len(settings.WALLET)!=42 and len(settings.WALLET)!=40:
+    if len(settings.WALLET)!=42 and len(settings.WALLET)!=6:
         log.error("Wrong WALLET!")
         sys.exit()
     settings.CUSTOM_EMAIL = settings.MONITORING_EMAIL if settings.MONITORING_EMAIL and settings.MONITORING else ""
